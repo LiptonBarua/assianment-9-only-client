@@ -1,14 +1,16 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-
+import Topie from '../Topie/Topie';
+import './Topies.css'
 
 const Topies = () => {
-    const projects = useLoaderData()
+    const loaderData = useLoaderData()
+    const projects = loaderData.data;
+    console.log(projects)
     return (
-        <div>
-           <h1>{projects.data.length}</h1>
+        <div className='card-container mx-8 md:mx-40 my-16 grid sm:grid-cols-1 md:grid-cols-3 gap-4'>
            {
-            projects.map((project)=>console.log(project))
+            projects.map(topie=> <Topie key={topie.id} topie={topie}></Topie>)
            }
         </div>
     );
