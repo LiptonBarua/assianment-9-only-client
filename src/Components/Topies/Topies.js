@@ -6,7 +6,6 @@ import './Topies.css'
 const Topies = () => {
     const loaderData = useLoaderData()
     const projects = loaderData.data;
-    console.log(projects)
     return (
         <div className='card-container mx-8 md:mx-40 my-16 grid sm:grid-cols-1 md:grid-cols-3 gap-4'>
            {

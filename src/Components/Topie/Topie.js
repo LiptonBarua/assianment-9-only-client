@@ -10,7 +10,7 @@ const Topie = ({topie}) => {
             <h1>{name}</h1>
             <p>Total: {total}</p>
             
-            <Link to={`/quiz/${id}`}><button className='w-full py-2 bg-blue-500  hover:bg-red-700'>Add Click</button></Link>
+            <Link to={`/post/${id}`}><button className='w-full py-2 bg-blue-500  hover:bg-red-700'>Add Click</button></Link>
         </div>
     );
 };
