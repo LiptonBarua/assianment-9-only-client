@@ -2,7 +2,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Blog from './Components/Blog/Blog';
 import Main from './Components/Main/Main';
-import Post from './Components/Post/Post';
+import Questions from './Components/Questions/Questions';
 import Statistics from './Components/Statistics/Statistics';
 import Topies from './Components/Topies/Topies';
 
@@ -19,11 +19,11 @@ function App() {
       element: <Topies></Topies>
     },
      {
-     path : '/post/:postId', 
+     path : '/quiz/:quizId', 
      loader: async({params})=>{
-      return fetch (`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+      return fetch (`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
      },
-     element: <Post></Post>
+     element: <Questions></Questions>
      },
    {path: '/statistics', element: <Statistics></Statistics>},
     ]
