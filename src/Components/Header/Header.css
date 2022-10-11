@@ -1,0 +1,11 @@
+.navbar{
+    background-color: black;
+}
+.navbar-brand{
+    font-size: 30px;
+}
+.manu a{
+    margin-right: 63px;
+    font-size: 20px;
+    color: white;
+}
