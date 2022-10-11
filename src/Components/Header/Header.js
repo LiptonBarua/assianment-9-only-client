@@ -15,6 +15,7 @@ const Header = () => {
       <div className="manu ms-auto">
 
         <Link to='/'>Topies</Link>
+        {/* <Link></Link> */}
         <Link to='/statistics'>Statistics</Link>
         <Link to='blog'>Blog</Link>
 
