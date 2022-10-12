@@ -28,10 +28,9 @@ const handclick=(id)=>{
 }
 
     return (
-        <div>
-           
-       
-        <div className='container p-10 my-10 shadow-lg bg-orange-900'>
+        <section className='container my-5'>
+            <div>
+            <div className='p-10  bg-orange-900'>
         <DropdownButton className='ml-[70%] md:ml-[90%]' id="dropdown-basic-button" title="Current Ans">
       <Dropdown.Item href="#/action-1"><h2>Ans: {count}</h2></Dropdown.Item>
     </DropdownButton>
@@ -39,7 +38,7 @@ const handclick=(id)=>{
           
           </div>
             <h1 className='text-justify'>{question}</h1>
-            <from class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <from class="grid grid-cols-1 md:grid-cols-2 ">
              <div className='bg-black text-white p-5 text-center flex items-center'>
              <ToastContainer />
              <label onClick={()=>handclick(options[0])} for={options[0]}><input type="radio" id={options[0]} name="contact" value="email" checked />{options[0]}</label>
@@ -61,7 +60,8 @@ const handclick=(id)=>{
        </div>
 </from>
         </div>
-        </div>
+            </div>
+        </section>
     );
 };
 
