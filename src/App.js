@@ -1,7 +1,6 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Blog from './Components/Blog/Blog';
-import Current from './Components/Current/Current';
 import Main from './Components/Main/Main';
 import Questions from './Components/Questions/Questions';
 import Statistics from './Components/Statistics/Statistics';
@@ -31,9 +30,7 @@ function App() {
     return fetch ('https://openapi.programming-hero.com/api/quiz')
   },
    element: <Statistics></Statistics>},
-   {
-    path: '/current/:currentId', element: <Current></Current>
-   }
+  
     ]
   },
   {path: '/blog', element: <Blog></Blog>},

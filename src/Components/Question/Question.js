@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faEye } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom';
-import Current from '../Current/Current';
+
+
+
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 
 
 const Question = ({ans}) => {
-    const{id,question, options,correctAnswer}=ans;
+    const{question, options,correctAnswer}=ans;
     const [count, setCount]=useState()
 const handclick=(id)=>{
   if(correctAnswer===id){
@@ -30,9 +31,13 @@ const handclick=(id)=>{
         <div>
            
        
-        <div className='container bg-light p-10 my-10 shadow-lg'>
-           <h1>{count}</h1>
-         <Link to={`/current/${id}`}><FontAwesomeIcon className='ml-[95%]' icon={faEye} /></Link>
+        <div className='container p-10 my-10 shadow-lg bg-orange-900'>
+        <DropdownButton className='ml-[70%] md:ml-[90%]' id="dropdown-basic-button" title="Current Ans">
+      <Dropdown.Item href="#/action-1"><h2>Ans: {count}</h2></Dropdown.Item>
+    </DropdownButton>
+          <div>
+          
+          </div>
             <h1 className='text-justify'>{question}</h1>
             <from class="grid grid-cols-1 md:grid-cols-2 gap-4">
              <div className='bg-black text-white p-5 text-center flex items-center'>
